@@ -205,6 +205,7 @@ int addition_matrix(int** matrix_a, int** matrix_b, int row, int col)
         return -1;
     }
 
+    free_matrix(matrix_sum, row, col); // 메모리 해제
     return 1;
 }
 
@@ -234,6 +235,7 @@ int subtraction_matrix(int** matrix_a, int** matrix_b, int row, int col)
         return -1;
     }
 
+    free_matrix(matrix_sub, row, col); // 메모리 해제
     return 1;
 }
 
@@ -298,5 +300,7 @@ int multiply_matrix(int** matrix_a, int** matrix_t, int row, int col)
         return -1;
     }
 
+    free_matrix(matrix_axt, row, row); // 메모리 해제
+    
     return 1;
 }
